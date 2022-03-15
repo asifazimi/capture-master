@@ -13,6 +13,9 @@ function App() {
       <button className="font-bold border rounded px-3 py-2 border-red-500 transition-all ease-out hover:bg-pink-500 hover:text-white ">
         Submit me
       </button>
+      <button className="font-bold border rounded px-3 py-2 border-red-500 transition-all ease-out hover:bg-pink-500 hover:text-white ">
+        Submit me
+      </button>
     </div>
   );
 }
