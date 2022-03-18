@@ -6,6 +6,7 @@ function App() {
         <span className="text-2xl font-black underline text-red-800">
           Here is the list for you guys hope you enjoy it. and yes.
         </span>
+        <span>Hi</span>
       </h1>
     </div>
   );
