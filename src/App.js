@@ -1,8 +1,10 @@
+// Import pages
+import Aboutus from "./pages/AboutUs";
+
 function App() {
   return (
     <div className="App">
-      <h1>Film</h1>
-      <h1>Github</h1>
+      <Aboutus />
     </div>
   );
 }
