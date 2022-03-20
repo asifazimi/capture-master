@@ -21,7 +21,7 @@ const AboutSection = () => {
           Contact us for any photography or videography ideas that you have. We
           have professionals with amazing skills to help you achive it.
         </p>
-        <button>Contact me</button>
+        <button>Contact us</button>
       </div>
       <div className="image">
         <img src={home1} alt="home1" />
