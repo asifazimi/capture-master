@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         background-color: #1b1b1b;
+        font-family: 'Inter', sans-serif;
     }
 
     button {
@@ -24,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
 
         &:hover {
             background: #23d997;
-            color: white;
+            color: #fff;
         }
     }
 
@@ -56,8 +57,6 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.4rem;
         line-height: 150%;
     }
-
-
 
 `;
 
