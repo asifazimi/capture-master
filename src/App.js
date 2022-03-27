@@ -1,16 +1,24 @@
 // Import pages
-import Aboutus from "./pages/AboutUs";
+import AboutUs from "./pages/AboutUs";
+import OurWork from "./pages/OurWork";
+import ContactUs from "./pages/ContactUs";
 // Import components
 import Nav from "./components/Nav";
 // Global Style
 import GlobalStyle from "./components/GlobalStyle";
+// Router
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <Aboutus />
+      <Routes>
+        <Route path="/" element={<AboutUs />}></Route>
+        <Route path="/work" element={<OurWork />}></Route>
+        <Route path="/contact" element={<ContactUs />}></Route>
+      </Routes>
     </div>
   );
 }
