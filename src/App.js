@@ -2,6 +2,7 @@
 import AboutUs from "./pages/AboutUs";
 import OurWork from "./pages/OurWork";
 import ContactUs from "./pages/ContactUs";
+import MovieDetail from "./pages/MovieDetail";
 // Import components
 import Nav from "./components/Nav";
 // Global Style
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AboutUs />}></Route>
         <Route path="/work" element={<OurWork />}></Route>
+        <Route path="/work/:id" element={<MovieDetail />}></Route>
         <Route path="/contact" element={<ContactUs />}></Route>
       </Routes>
     </div>
