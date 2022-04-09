@@ -7,7 +7,7 @@ import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
 // Animation
 import { motion } from "framer-motion";
-import { pageAnimation } from "../animation";
+import { pageAnimation, fade, photoAnim, lineAnim } from "../animation";
 
 const OurWork = () => {
   return (
@@ -19,21 +19,23 @@ const OurWork = () => {
       exit="exit"
     >
       <Movie>
-        <h2>The athlete </h2>
-        <div className="line"></div>
+        <motion.h2 variants={fade}>The athlete </motion.h2>
+        <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="/work/the-athlete">
-          <img src={athlete} alt="Image" />
+          <Hide>
+            <motion.img variants={photoAnim} src={athlete} alt="Image" />
+          </Hide>
         </Link>
       </Movie>
       <Movie>
-        <h2>The theracer </h2>
+        <motion.h2>The theracer </motion.h2>
         <div className="line"></div>
         <Link to="/work/the-racer">
           <img src={theracer} alt="Image" />
         </Link>
       </Movie>
       <Movie>
-        <h2>The goodtimes </h2>
+        <motion.h2>The goodtimes </motion.h2>
         <div className="line"></div>
         <Link to="/work/good-times">
           <img src={goodtimes} alt="Image" />
@@ -60,7 +62,7 @@ const Movie = styled.div`
   .line {
     height: 0.5rem;
     margin-bottom: 3rem;
-    background: #cccccc;
+    background: #23d997;
   }
 
   img {
@@ -68,6 +70,10 @@ const Movie = styled.div`
     height: 70vh;
     object-fit: cover;
   }
+`;
+
+const Hide = styled.div`
+  overflow: hidden;
 `;
 
 export default OurWork;

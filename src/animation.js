@@ -54,3 +54,14 @@ export const photoAnim = {
     transition: { duration: 0.75, ease: "easeOut" },
   },
 };
+
+export const lineAnim = {
+  hidden: {
+    width: "0%",
+  },
+
+  show: {
+    width: "100%",
+    transition: { duration: 1 },
+  },
+};
