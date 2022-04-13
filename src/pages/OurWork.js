@@ -17,6 +17,8 @@ import {
 } from "../animation";
 import { useScroll } from "../components/useScroll";
 import { soopeBoop } from "../animation";
+// Scroll at the Top of the window
+import ScrollTop from "../components/ScrollTop";
 
 const OurWork = () => {
   const [element, controls] = useScroll();
@@ -77,6 +79,7 @@ const OurWork = () => {
           </Link>
         </Movie>
       </Hide>
+      <ScrollTop />
     </Work>
   );
 };
