@@ -15,8 +15,13 @@ import {
   slider,
   sliderContainer,
 } from "../animation";
+import { useScroll } from "../components/useScroll";
+import { soopeBoop } from "../animation";
 
 const OurWork = () => {
+  const [element, controls] = useScroll();
+  const [element2, controls2] = useScroll();
+
   return (
     <Work
       // style={{ background: "#fff" }}
@@ -40,24 +45,38 @@ const OurWork = () => {
           </Hide>
         </Link>
       </Movie>
-      <Movie>
-        <motion.h2 variants={fade}>The theracer </motion.h2>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/the-racer">
-          <Hide>
-            <motion.img variants={photoAnim} src={theracer} alt="Image" />
-          </Hide>
-        </Link>
-      </Movie>
-      <Movie>
-        <motion.h2 variants={fade}>The goodtimes </motion.h2>
-        <motion.div variants={lineAnim} className="line"></motion.div>
-        <Link to="/work/good-times">
-          <Hide>
-            <motion.img variants={photoAnim} src={goodtimes} alt="Image" />
-          </Hide>
-        </Link>
-      </Movie>
+      <Hide>
+        <Movie
+          variants={fade}
+          initial="hidden"
+          animate={controls}
+          ref={element}
+        >
+          <motion.h2 variants={fade}>The theracer </motion.h2>
+          <motion.div variants={lineAnim} className="line"></motion.div>
+          <Link to="/work/the-racer">
+            <Hide>
+              <motion.img variants={photoAnim} src={theracer} alt="Image" />
+            </Hide>
+          </Link>
+        </Movie>
+      </Hide>
+      <Hide>
+        <Movie
+          variants={fade}
+          initial="hidden"
+          animate={controls2}
+          ref={element2}
+        >
+          <motion.h2 variants={fade}>The goodtimes </motion.h2>
+          <motion.div variants={lineAnim} className="line"></motion.div>
+          <Link to="/work/good-times">
+            <Hide>
+              <motion.img variants={photoAnim} src={goodtimes} alt="Image" />
+            </Hide>
+          </Link>
+        </Movie>
+      </Hide>
     </Work>
   );
 };
@@ -73,7 +92,7 @@ const Work = styled(motion.div)`
   }
 `;
 
-const Movie = styled.div`
+const Movie = styled(motion.div)`
   padding-bottom: 10rem;
 
   .line {

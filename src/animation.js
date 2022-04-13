@@ -31,6 +31,16 @@ export const aboutAnim = {
   },
 };
 
+export const titleAnim = {
+  hidden: {
+    y: 200,
+  },
+  show: {
+    y: 0,
+    transition: { duration: 0.75, ease: "easeOut" },
+  },
+};
+
 export const fade = {
   hidden: {
     opacity: 0,
@@ -88,4 +98,9 @@ export const sliderContainer = {
 export const scrollReveal = {
   hidden: { opacity: 0, scale: 1.2 },
   show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+};
+
+export const soopeBoop = {
+  hidden: { width: "0%" },
+  show: { width: "100%", transition: { duration: 0.75 } },
 };

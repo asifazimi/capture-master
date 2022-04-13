@@ -14,51 +14,53 @@ const ServicesSection = () => {
   const [element, controls] = useScroll();
 
   return (
-    <Services
-      animate={controls}
-      initial="hidden"
-      ref={element}
-      variants={scrollReveal}
-    >
-      <Description>
-        <h2>
-          High <span>quality</span> services
-        </h2>
-        <Cards>
-          <Card>
-            <div className="icon">
-              <img src={clock} alt="clock icon" />
-              <h3>Efficient</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img src={diaphragm} alt="diaphragm icon" />
-              <h3>Diaphragm</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img src={money} alt="money icon" />
-              <h3>Affordabl</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img src={teamwork} alt="teamwork icon" />
-              <h3>Teamwork</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-        </Cards>
-      </Description>
-      <Image>
-        <img src={home2} alt="camera" />
-      </Image>
-    </Services>
+    <Hidden>
+      <Services
+        animate={controls}
+        initial="hidden"
+        ref={element}
+        variants={scrollReveal}
+      >
+        <Description>
+          <h2>
+            High <span>quality</span> services
+          </h2>
+          <Cards>
+            <Card>
+              <div className="icon">
+                <img src={clock} alt="clock icon" />
+                <h3>Efficient</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </Card>
+            <Card>
+              <div className="icon">
+                <img src={diaphragm} alt="diaphragm icon" />
+                <h3>Diaphragm</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </Card>
+            <Card>
+              <div className="icon">
+                <img src={money} alt="money icon" />
+                <h3>Affordabl</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </Card>
+            <Card>
+              <div className="icon">
+                <img src={teamwork} alt="teamwork icon" />
+                <h3>Teamwork</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </Card>
+          </Cards>
+        </Description>
+        <Image>
+          <img src={home2} alt="camera" />
+        </Image>
+      </Services>
+    </Hidden>
   );
 };
 
@@ -92,6 +94,10 @@ const Card = styled.div`
       margin-left: 1rem;
     }
   }
+`;
+
+const Hidden = styled.div`
+  overflow: hidden;
 `;
 
 export default ServicesSection;
